@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import logo from '../assets/logo.webp';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,6 +21,7 @@ export default function Navbar() {
   const links = [
     { label: 'Services', id: 'services' },
     { label: 'Projects', id: 'projects' },
+    { label: 'Recommendation', id: 'recommendation' },
     { label: 'Showreels', id: 'showreels' },
     { label: 'About us', id: 'awards' },
     { label: 'Contact', id: 'contact' },
@@ -31,7 +31,7 @@ export default function Navbar() {
     <>
       <nav id="main-nav" className={scrolled ? 'scrolled' : ''}>
         <div className="nav-inner">
-          <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ border: '0px solid red' }}>
+          <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
 
             {/* <img src={logo} style={{ width: '50px', height: '50px' }} alt="logo" /> */}
             Divinity Pictures
@@ -40,36 +40,38 @@ export default function Navbar() {
             {links.map((link) => (
               <button
                 key={link.id}
+                type="button"
                 className="nav-link"
                 onClick={() => scrollTo(link.id)}
               >
                 {link.label}
               </button>
             ))}
-            <button className="nav-cta" onClick={() => scrollTo('contact')}>
+            <button type="button" className="nav-cta" onClick={() => scrollTo('contact')}>
               Start a Project
             </button>
           </div>
-          <button className="mobile-toggle" onClick={() => setMobileOpen(true)}>
+          <button type="button" className="mobile-toggle" onClick={() => setMobileOpen(true)} aria-label="Open navigation menu">
             <span className="material-symbols-outlined">menu</span>
           </button>
         </div>
       </nav>
 
       <div className={`mobile-menu ${mobileOpen ? 'open' : ''}`}>
-        <button className="mobile-close" onClick={() => setMobileOpen(false)}>
+        <button type="button" className="mobile-close" onClick={() => setMobileOpen(false)} aria-label="Close navigation menu">
           <span className="material-symbols-outlined">close</span>
         </button>
         {links.map((link) => (
           <button
             key={link.id}
+            type="button"
             className="nav-link"
             onClick={() => scrollTo(link.id)}
           >
             {link.label}
           </button>
         ))}
-        <button className="nav-cta" onClick={() => scrollTo('contact')}>
+        <button type="button" className="nav-cta" onClick={() => scrollTo('contact')}>
           Start a Project
         </button>
       </div>

@@ -16,11 +16,11 @@ const services = [
     title: 'Matte Painting',
     desc: 'Stunning digital environments that transport audiences to worlds beyond imagination.',
   },
-  {
-    icon: 'blur_on',
-    title: 'Motion Capture',
-    desc: 'State-of-the-art performance capture delivering believable digital characters and creatures.',
-  },
+  // {
+  //   icon: 'blur_on',
+  //   title: 'Motion Capture',
+  //   desc: 'State-of-the-art performance capture delivering believable digital characters and creatures.',
+  // },
 ];
 
 export default function Services() {

@@ -186,56 +186,56 @@ export default function Hero() {
 
   return (
     <section id="hero">
-      <div className="hero-bg">
+      {/* <div className="hero-bg">
         <img
           src={heroBg}
           alt="Cinematic VFX scene"
         />
-      </div>
+      </div> */}
 
       {/* 3D Weather Canvas — sits between bg and overlay */}
-      <canvas ref={canvasRef} className="hero-weather-canvas" />
+      {/* <canvas ref={canvasRef} className="hero-weather-canvas" /> */}
 
-      <div className="hero-overlay"></div>
+      {/* <div className="hero-overlay"></div>
 
       <div className="hero-content">
-        <div className="hero-label">
-          <div className="hero-label-line"></div>
+        <div className="hero-label"> */}
+      {/* <div className="hero-label-line" style={{ border: '1px solid red' }}></div>
           <span>Award-Winning VFX Studio</span>
-          <div className="hero-label-line"></div>
-        </div>
+          <div className="hero-label-line"></div> */}
+      {/* </div> */}
 
-        <h1 className="hero-title">Where Imagination Meets Reality</h1>
+      {/* <h1 className="hero-title">Where Imagination Meets Reality</h1>
 
         <p className="hero-subtitle">
           We craft breathtaking visual effects that push the boundaries of storytelling —
           from blockbuster films to immersive digital experiences.
-        </p>
+        </p>  */}
 
-        <div className="hero-buttons">
-          <button className="btn-primary" onClick={() => {
+      <div className="hero-buttons">
+        {/* <button className="btn-primary" onClick={() => {
             const el = document.getElementById('projects');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}>
             View Our Work
             <span className="material-symbols-outlined">arrow_forward</span>
-          </button>
-          <button className="btn-secondary" onClick={() => {
-            const el = document.getElementById('showreels');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}>
-            <span className="material-symbols-outlined">play_arrow</span>
-            Watch Showreel
-          </button>
-        </div>
+          </button> */}
+        <button className="btn-secondary" onClick={() => {
+          const el = document.getElementById('showreels');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }}>
+          <span className="material-symbols-outlined">play_arrow</span>
+          Watch Showreel
+        </button>
       </div>
+      {/* </div> */}
 
-      <div className="scroll-indicator" onClick={scrollToServices}>
+      {/* <div className="scroll-indicator" onClick={scrollToServices}>
         <span>Scroll</span>
         <div className="scroll-line">
           <div className="scroll-dot"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -6,7 +6,6 @@ export default function Footer() {
   };
 
   const scrollTo = (id) => {
-    setMobileOpen(false);
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -45,13 +44,11 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="footer-gradient-line"></div>
-      <div className="container" style={{ border: '0px solid red' }}>
-        <div className="footer-main" style={{ border: '0px solid white', display: 'flex', justifyContent: 'space-between' }}>
-          <div style={{ border: '0px solid red' }}>
+      <div className="container">
+        <div className="footer-main">
+          <div className="footer-brand">
             <div className="footer-brand-name">
-              {/* Divinity Pictures */}
-              <img src={logo} style={{ width: '100px', height: '100px' }} alt="Centered image" />
-
+              <img src={logo} style={{ width: '90px', height: '90px' }} alt="Divinity Pictures" />
             </div>
             <p className="footer-brand-desc">
               Award-winning visual effects studio crafting cinematic experiences that
@@ -73,52 +70,38 @@ export default function Footer() {
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.376.55A3.016 3.016 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136C4.495 20.5 12 20.5 12 20.5s7.505 0 9.376-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.6 15.5v-7l6.3 3.5-6.3 3.5z" />
                 </svg>
               </a>
-              {/* <a href="#" className="footer-social-link" aria-label="Twitter/X">
-                <svg viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a href="#" className="footer-social-link" aria-label="Vimeo">
-                <svg viewBox="0 0 24 24">
-                  <path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z" />
-                </svg>
-              </a> */}
             </div>
           </div>
-          <div style={{ border: '0px solid yellow', display: 'flex', width: '40%', justifyContent: 'space-around' }}>
-            <div style={{ border: '0px solid white' }}>
-              <h4 className="footer-col-title">Services</h4>
-              <ul className="footer-links">
-                {footerLinks.services.map((link) => (
-                  <li key={link}>
-                    <a href="#services" className="footer-link">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
-            <div style={{ border: '0px solid red' }}>
-              <h4 className="footer-col-title">Company</h4>
-              <ul className="footer-links">
-                {/* {
-                  footerLinks.company.map((link) => (
-                    <li key={link.id}>
-                      <button
-                        onClick={() => scrollTo(link.id)}
-                        className="footer-link">
-                        {link.label}
-                      </button>
-                    </li>
-                  ))
-                } */}
-                {footerLinks.company.map((link) => (
-                  <li key={link.id}>
-                    <a className="footer-link">{link.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="footer-col">
+            <h4 className="footer-col-title">Services</h4>
+            <ul className="footer-links">
+              {footerLinks.services.map((link) => (
+                <li key={link}>
+                  <a href="#services" className="footer-link">{link}</a>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          <div className="footer-col">
+            <h4 className="footer-col-title">Company</h4>
+            <ul className="footer-links">
+              {footerLinks.company.map((link) => (
+                <li key={link.id}>
+                  <button
+                    type="button"
+                    onClick={() => scrollTo(link.id)}
+                    className="footer-link"
+                    style={{ background: 'none', border: 'none', padding: 0, font: 'inherit', cursor: 'pointer', textAlign: 'left' }}
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
 
           {/* <div>
@@ -131,7 +114,6 @@ export default function Footer() {
               ))}
             </ul>
           </div> */}
-        </div>
 
         <div className="footer-bottom">
           <p className="footer-copy">

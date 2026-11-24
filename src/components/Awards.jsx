@@ -1,82 +1,36 @@
 import { useEffect, useRef } from 'react';
 
-const stats = [
-  { number: '150+', label: 'Projects Delivered' },
-  { number: '45+', label: 'Industry Awards' },
-  { number: '12', label: 'Years of Excellence' },
-  { number: '200+', label: 'Artists Worldwide' },
-];
-
-const timeline = [
-
+const teamMembers = [
   {
-    year: 'Founder– VFX Supervisor',
-    icon: 'emoji_events',
-    title: 'GOKUL MAHAJAN',
+    name: 'GOKUL MAHAJAN',
+    role: 'Founder – VFX Supervisor',
+    initials: 'GM',
     desc: 'Leading creative vision and technical excellence to deliver world-class visual effects and cinematic experiences.',
   },
   {
-    year: 'Founder– VFX Supervisor',
-    icon: 'emoji_events',
-    title: 'KAPIL MORE',
+    name: 'KAPIL MORE',
+    role: 'Founder – VFX Supervisor',
+    initials: 'KM',
     desc: 'Driving artistic vision, technical innovation, and cinematic excellence in visual effects.',
   },
   {
-    year: 'Studio Manager',
-    icon: 'emoji_events',
-    title: 'SURESH KUMAWAT',
-    desc: 'Driving studio excellence through strategic leadership, seamless operations, creative coordination, and high-quality project delivery.',
-  },
-
-  {
-    year: 'IT Head',
-    icon: 'emoji_events',
-    title: 'CHETAN MALI',
+    name: 'CHETAN MALI',
+    role: 'IT Head',
+    initials: 'CM',
     desc: 'Leads the organization’s technology strategy, infrastructure, and digital innovation to ensure secure, efficient, and future-ready IT operations.',
   },
-
   {
-    year: 'HR/Operations Executive',
-    icon: 'emoji_events',
-    title: 'KAVYA POOJARY',
+    name: 'KAVYA POOJARY',
+    role: 'HR / Operations Executive',
+    initials: 'KP',
     desc: 'Driving organizational efficiency by seamlessly managing human resources, employee engagement, and day-to-day operational excellence.',
   },
-
   {
-    year: 'Finance Head',
-    icon: 'emoji_events',
-    title: 'YOGESHWARI MAHAJAN',
+    name: 'YOGESHWARI MAHAJAN',
+    role: 'Finance Head',
+    initials: 'YM',
     desc: 'Leads financial strategy, planning, budgeting, and financial operations to drive sustainable growth and ensure organizational financial stability.',
   },
-
-
-
-
-  //This is fake award don't use this
-  // {
-  //   year: '2024',
-  //   icon: 'emoji_events',
-  //   title: 'Academy Award — Best Visual Effects',
-  //   desc: 'Recognized for groundbreaking work on "Echoes of Eternity" at the 96th Academy Awards.',
-  // },
-  // {
-  //   year: '2023',
-  //   icon: 'workspace_premium',
-  //   title: 'BAFTA — Outstanding British Film VFX',
-  //   desc: 'Honored for exceptional visual effects artistry in "Quantum Rift" television series.',
-  // },
-  // {
-  //   year: '2022',
-  //   icon: 'military_tech',
-  //   title: 'VES Award — Outstanding CG Character',
-  //   desc: 'Our creature team set new standards for digital character creation in "Genesis Protocol".',
-  // },
-  // {
-  //   year: '2021',
-  //   icon: 'star',
-  //   title: 'HPA Award — Outstanding Visual Effects',
-  //   desc: 'Pioneering real-time VFX workflows that redefined the production pipeline.',
-  // },
 ];
 
 export default function Awards() {
@@ -99,55 +53,61 @@ export default function Awards() {
   }, []);
 
   return (
-    <section id="awards" className="section-padding" ref={sectionRef}>
+    <section id="awards" className="section-padding about-section" ref={sectionRef}>
       <div className="awards-glow"></div>
       <div className="container">
-        <div className="awards-layout" style={{ border: "0px solid red" }}>
-          <div className="awards-left" style={{ border: "0px solid red" }}>
-            <span className="section-label reveal">Recognition</span>
-            <h2 className="section-title reveal reveal-delay-1">
-              About Us
-            </h2>
-            <p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: "justify" }}>
-              DIVINITY PICTURES VFX is an award-winning visual effects studio based in Mumbai, India, dedicated to delivering high-quality, visually compelling work for the entertainment industry.<br /><br />
+        {/* Horizontal About Us Area */}
+        <div className="about-header-wrap">
+          <span className="section-label reveal">Who We Are</span>
+          <h2 className="section-title reveal reveal-delay-1">About Us</h2>
+          <p className="about-lead reveal reveal-delay-2">
+            DIVINITY PICTURES VFX is an award-winning visual effects studio based in Mumbai, India, dedicated to delivering high-quality, visually compelling work for the entertainment industry.
+          </p>
+        </div>
 
-              We take pride in bringing together a talented team of artists, technicians, producers, and support professionals who share a passion for creativity, innovation, and storytelling. With a TPN-audited facility, an established VFX pipeline, and an AI-enhanced production workflow, we combine artistic excellence with cutting-edge technology to push creative boundaries and deliver exceptional visual experiences.<br /><br />
-
-              With experience delivering projects across domestic and international markets, we provide comprehensive visual effects and digital production services for feature films, television, commercials, and web content. Our AI-enhanced pipeline complements our established workflows, enabling us to explore new creative possibilities, optimize production efficiency, and meet the evolving demands of modern filmmaking while maintaining high standards of quality and artistic control.<br /><br />
-
-              From creative development and technical execution to final delivery, our experienced artists and producers work closely with clients at every stage of production to ensure seamless collaboration, efficient execution, and timely delivery without compromising on quality.<br /><br />
-
-              At Divinity Pictures, we believe in transforming creative visions into reality through innovation, collaboration, and a commitment to excellence. We continually strive to expand the possibilities of visual storytelling by combining artistic talent, technical expertise, and emerging technologies.<br /><br />
-
+        <div className="about-columns-grid reveal reveal-delay-3">
+          <div className="about-col">
+            <p>
+              We take pride in bringing together a talented team of artists, technicians, producers, and support professionals who share a passion for creativity, innovation, and storytelling. With a TPN-audited facility, an established VFX pipeline, and an AI-enhanced production workflow, we combine artistic excellence with cutting-edge technology to push creative boundaries and deliver exceptional visual experiences.
             </p>
+            <p>
+              With experience delivering projects across domestic and international markets, we provide comprehensive visual effects and digital production services for feature films, television, commercials, and web content. Our AI-enhanced pipeline complements our established workflows, enabling us to explore new creative possibilities, optimize production efficiency, and meet the evolving demands of modern filmmaking while maintaining high standards of quality and artistic control.
+            </p>
+          </div>
+          <div className="about-col">
+            <p>
+              From creative development and technical execution to final delivery, our experienced artists and producers work closely with clients at every stage of production to ensure seamless collaboration, efficient execution, and timely delivery without compromising on quality.
+            </p>
+            <p>
+              At Divinity Pictures, we believe in transforming creative visions into reality through innovation, collaboration, and a commitment to excellence. We continually strive to expand the possibilities of visual storytelling by combining artistic talent, technical expertise, and emerging technologies.
+            </p>
+          </div>
+        </div>
 
-            {/* <div className="stats-grid" style={{ border: "0px solid red" }}>
-              {stats.map((stat, i) => (
-                <div key={stat.label} className={`stat-item reveal reveal-delay-${i + 3}`}>
-                  <span className="stat-number">{stat.number}</span>
-                  <span className="stat-label">{stat.label}</span>
-                  <div className="stat-line"></div>
-                </div>
-              ))}
-            </div> */}
+        {/* Horizontal Our Team Area */}
+        <div className="team-container">
+          <div className="team-header">
+            <span className="section-label reveal">Leadership & Core Team</span>
+            <h2 className="section-title reveal reveal-delay-1">Our Team</h2>
           </div>
 
-          <div className="awards-right">
-            <div className="timeline">
-              <div className="timeline-line"></div>
-              {timeline.map((entry, i) => (
-                <div key={entry.year + entry.title} className={`timeline-entry reveal reveal-delay-${i + 1}`}>
-                  <div className="timeline-dot">
-                    <span className="material-symbols-outlined">{entry.icon}</span>
+          <div className="team-grid">
+            {teamMembers.map((member, i) => (
+              <div
+                key={member.name}
+                className={`team-card reveal reveal-delay-${(i % 5) + 1}`}
+              >
+                <div className="team-card-shimmer"></div>
+                <div className="team-card-top">
+                  <div className="team-avatar-ring">
+                    <span className="team-initials">{member.initials}</span>
                   </div>
-                  <div className="timeline-card">
-                    <div className="timeline-year">{entry.year}</div>
-                    <h3 className="timeline-title">{entry.title}</h3>
-                    <p className="timeline-desc">{entry.desc}</p>
-                  </div>
+                  <span className="team-role-badge">{member.role}</span>
                 </div>
-              ))}
-            </div>
+                <h3 className="team-member-name">{member.name}</h3>
+                <p className="team-member-desc">{member.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

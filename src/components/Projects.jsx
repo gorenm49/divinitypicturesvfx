@@ -1,13 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 
-// Import all 14 movie poster assets
+// Import movie poster assets
 import vvaanImg from '../assets/VVAAN.jfif';
 import rajaShivajiImg from '../assets/RAJA SHIVAJI.png';
 import tumbadchiManjulaImg from '../assets/TUMBADACHI MANJULA.jpg';
 import pachFutachaBachanImg from '../assets/PACH FUTACHA BACHAAN.jpg';
-import starbrightImg from '../assets/STARBRIGHT.png';
 import undekhiImg from '../assets/UNDEKHI.jpeg';
-import baramullaImg from '../assets/BARAMULLA.jpg';
 import dhurandharImg from '../assets/DHURANDHAR.jpg';
 import tronAresImg from '../assets/TRON ARES.jpg';
 import badCopImg from '../assets/BAD COP.jpeg';
@@ -50,28 +48,12 @@ const projects = [
     image: pachFutachaBachanImg,
   },
   {
-    id: 'starbright',
-    name: 'Starbright',
-    year: '2026',
-    type: 'Movie',
-    tag: 'Fantasy / Adventure',
-    image: starbrightImg,
-  },
-  {
     id: 'undekhi-s4',
     name: 'Undekhi (Season 4)',
     year: '2026',
     type: 'Web Series',
     tag: 'Crime Thriller',
     image: undekhiImg,
-  },
-  {
-    id: 'baramulla',
-    name: 'Baramulla',
-    year: '2025',
-    type: 'Movie',
-    tag: 'Supernatural Thriller',
-    image: baramullaImg,
   },
   {
     id: 'dhurandhar',
@@ -464,7 +446,7 @@ export default function Projects() {
                     <span className="meta-value">{selectedPoster.type}</span>
                   </div>
                   <div className="modal-meta-row">
-                    <span className="meta-label">VFX & Post-Production</span>
+                    <span className="meta-label">VFX</span>
                     <span className="meta-value">Divinity Pictures VFX</span>
                   </div>
                 </div>
